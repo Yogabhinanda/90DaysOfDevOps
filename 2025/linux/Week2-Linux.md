@@ -17,20 +17,20 @@ Imagine you're managing a **Linux-based production server** and need to ensure t
 
 SOLUTION:
 
-sudo useradd devops_user
-sudo groupadd devops_team
-sudo usermod -aG devops_team devops_user 
-sudo passwd devops_user 
-New password: 
-Retype new password: 
-passwd: password updated successfully
-sudo usermod -aG sudo devops_user 
+- sudo useradd devops_user
+- sudo groupadd devops_team
+- sudo usermod -aG devops_team devops_user 
+- sudo passwd devops_user 
+- New password: 
+- Retype new password: 
+- passwd: password updated successfully
+- sudo usermod -aG sudo devops_user 
 
-sudo nano /etc/ssh/sshd_config
-Add the following line:
-DenyUsers restricted_user
-Restart SSH service:
-sudo systemctl restart sshd
+- sudo nano /etc/ssh/sshd_config
+- Add the following line:
+- DenyUsers restricted_user
+- Restart SSH service:
+- sudo systemctl restart sshd
 
 ---
 
@@ -43,11 +43,11 @@ sudo systemctl restart sshd
 
 SOLUTION:
 
-mkdir /devops_workspace
-cd ./devops_workspace
-touch project_notes.txt
+- mkdir /devops_workspace
+- cd ./devops_workspace
+- touch project_notes.txt
 
-chmod 640 project_notes.txt
+- chmod 640 project_notes.txt
 
 ---
 
