@@ -1,6 +1,13 @@
 #!/bin/bash
 # Week 3 Challenge 1: User Account Management
 
+#______ IMPORTANT_______
+#This script expects the user to pass the arguements in the following way: 
+#USER CREATE - ./usermanagement.sh create USERNAME PASSWORD
+#USER DELETE - ./usermanagement.sh delete USERNAME
+#MODIFY PASSWD- ./usermanagement.sh modifypass USERNAME after which you will enter and confirm new password
+#LIST USERS- ./usermanagement.sh list
+
 # INPUT FROM USER - Taking the arguements via command line from user
 ACTION="$1"
 USERNAME="$2"
@@ -8,7 +15,7 @@ PASSWD="$3"
 
 # FUNCTIONS
 
-#-z "$USERNAME" checks if user name is empty
+#-z "$USERNAME" checks if user name is passed as empty
 create_user() {
     if [ -z "$USERNAME" ]; then
         echo "Enter a valid username, it cannot be empty"
